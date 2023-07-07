@@ -5,6 +5,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import CommonPage from "./CommonPage";
 const Page = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -20,6 +21,8 @@ const Page = () => {
       <Box sx={{ width: 1, height: 1 }}>
         <Routes>
           <Route path="/personalinfo" element={<Information />} />
+          <Route path="/teachinginterest" element={<CommonPage />} />
+          <Route path="*" element={<CommonPage />} />
         </Routes>
       </Box>
     </LocalizationProvider>

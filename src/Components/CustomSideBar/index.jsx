@@ -4,7 +4,6 @@ import vridheeLogo from "../../assets/vridheeLogo.png";
 import { useNavigate, useLocation } from "react-router-dom";
 const CustomSideBar = () => {
   const location = useLocation();
-  console.log(location, "location");
   const navigate = useNavigate();
   const getNavigateLink = (item) => {
     navigate(item.link);

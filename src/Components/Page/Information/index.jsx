@@ -4,7 +4,7 @@ import CustomSelect from "../../Common/CustomSelect";
 import MyLocationIcon from "@mui/icons-material/MyLocation";
 import CustomTextField from "../../Common/CustomTextField";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 const languageArr = ["Hindi", "English", "Kannada", "Tamil"];
 const locationArr = ["Bangalore", "Hyderabad", "Mumbai", "Pune"];
@@ -19,9 +19,9 @@ const Information = () => {
     birthday: new Date(),
   });
 
-  useEffect(() => {
-    console.log(AllInformation);
-  }, [AllInformation]);
+  // useEffect(() => {
+  //   console.log(AllInformation);
+  // }, [AllInformation]);
 
   return (
     <Box
