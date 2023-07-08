@@ -1,6 +1,6 @@
 .fontStyle {
   color: #737585;
-  min-width:'max-content'
+  min-width:'max-content !important'
 }
 .helloStyle {
   color: #01408e;

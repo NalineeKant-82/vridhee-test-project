@@ -76,7 +76,7 @@ const getDate=(date)=>{
         </Box>
       </Box>
       <Box>
-        <Typography className="fontStyle">
+        <Typography className="fontStyle" sx={{minWidth:'max-content'}}>
           Which language you prefer to learn?
         </Typography>
         <CustomSelect
@@ -85,20 +85,22 @@ const getDate=(date)=>{
           setAllInformation={setAllInformation}
           AllInformation={AllInformation}
           name="language"
+          sx={{minWidth:'max-content'}}
         />
       </Box>
       <Box>
-        <Typography className="fontStyle">where are you from?</Typography>
+        <Typography className="fontStyle" sx={{minWidth:'max-content'}}>where are you from?</Typography>
         <CustomSelect
           placeholder="select your location"
           selectData={locationArr}
           setAllInformation={setAllInformation}
           AllInformation={AllInformation}
           name="location"
+          
         />
       </Box>
       <OutlinedInput
-        sx={{ background: "#00408e", height: "40px" }}
+        sx={{ background: "#00408e", height: "40px",minWidth:'225px' }}
         startAdornment={
           <Box sx={{ display: "contents" }}>
             <MyLocationIcon sx={{ color: "white" }} />
@@ -142,7 +144,7 @@ const getDate=(date)=>{
         name="nickname"
       />
       <Box>
-        <Typography className="fontStyle">
+        <Typography className="fontStyle" sx={{minWidth:'max-content'}} >
           when can we wish you happy birthday
         </Typography>
         <DatePicker

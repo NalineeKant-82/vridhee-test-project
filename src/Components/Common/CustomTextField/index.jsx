@@ -14,13 +14,13 @@ const CustomTextField = ({
 
   return (
     <Box>
-      <Typography className="fontStyle"> {heading}</Typography>
+      <Typography className="fontStyle" sx={{minWidth:'max-content'}}> {heading}</Typography>
       <OutlinedInput
         fullWidth
         placeholder={placeholder}
         onChange={storeTextFieldData}
         name={name}
-        sx={{ height: "45px" }}
+        sx={{ height: "45px",minWidth:'max-content' }}
       />
     </Box>
   );
