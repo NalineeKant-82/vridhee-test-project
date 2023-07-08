@@ -21,7 +21,6 @@ const Page = () => {
       <Box sx={{ width: 1, height: 1 }}>
         <Routes>
           <Route path="/personalinfo" element={<Information />} />
-          <Route path="/teachinginterest" element={<CommonPage />} />
           <Route path="*" element={<CommonPage />} />
         </Routes>
       </Box>
