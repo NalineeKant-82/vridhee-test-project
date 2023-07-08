@@ -4,7 +4,7 @@ import CustomSelect from "../../Common/CustomSelect";
 import MyLocationIcon from "@mui/icons-material/MyLocation";
 import CustomTextField from "../../Common/CustomTextField";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import {  useState } from "react";
+import { useEffect, useState } from "react";
 
 const languageArr = ["Hindi", "English", "Kannada", "Tamil"];
 const locationArr = ["Bangalore", "Hyderabad", "Mumbai", "Pune"];
@@ -16,12 +16,16 @@ const Information = () => {
     email: "",
     name: "",
     nickname: "",
-    birthday: new Date(),
+    birthday: null,
   });
 
-  // useEffect(() => {
-  //   console.log(AllInformation);
-  // }, [AllInformation]);
+  useEffect(() => {
+    console.log(AllInformation);
+  }, [AllInformation]);
+
+const getDate=(date)=>{
+  setAllInformation({...AllInformation,birthday:date})
+}
 
   return (
     <Box
@@ -31,11 +35,11 @@ const Information = () => {
         flexDirection: "column",
         gap: 2,
         mt: 4,
-        boxSizing: "border-box"
+        boxSizing: "border-box",
       }}
     >
       <OutlinedInput
-        sx={{ background: "#f6faff", height: "45px" }}
+        sx={{ background: "#f6faff", height: "45px",minWidth:'373px' }}
         startAdornment={
           <Box sx={{ display: "flex" }}>
             <InputAdornment
@@ -53,7 +57,7 @@ const Information = () => {
       />
 
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Typography sx={{ color: "#01408e" }}>Hello Kishore</Typography>
+        <p className="helloStyle" >Hello Kishore</p>
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           <Typography
             sx={{
@@ -61,11 +65,12 @@ const Information = () => {
               justifyContent: "flex-end",
               fontSize: "13px",
               fontWeight: 1000,
+              minWidth:'max-content'
             }}
           >
             STEP 01/09
           </Typography>
-          <Typography sx={{ fontSize: "13px" }}>
+          <Typography sx={{ fontSize: "13px",minWidth:'max-content' }}>
             Complete to win 10vcoins
           </Typography>
         </Box>
@@ -141,7 +146,7 @@ const Information = () => {
           when can we wish you happy birthday
         </Typography>
         <DatePicker
-          // onChange={(e) => setAllInformation(e)}
+          onChange={getDate}
           sx={{
             "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root": {
               height: "45px",

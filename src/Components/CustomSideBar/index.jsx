@@ -11,7 +11,7 @@ const CustomSideBar = () => {
 
   return (
     <Box sx={{ width: "100%", height: "100%", display: ["none", "flex"] }}>
-      <Paper sx={{ width: "300px", height: "100%", background: "#044b91" }}>
+      <Paper sx={{  width: "40%", height: "100%", background: "#044b91",minWidth:'250px' }}>
         <Box sx={{ p: 3 }}>
           <img style={{ height: "50px", color: "white" }} src={vridheeLogo} />
         </Box>
@@ -42,6 +42,7 @@ const CustomSideBar = () => {
                 color: location?.pathname?.includes(item.link)
                   ? "#00498e"
                   : "white",
+                  minWidth:'200px'
               }}
               onClick={() => getNavigateLink(item)}
             >
